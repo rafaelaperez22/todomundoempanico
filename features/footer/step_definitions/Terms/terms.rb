@@ -1,4 +1,4 @@
-Dado("que estou na home") do
+Dado("estiver na home") do
   @homePage = HomePage.new
   @homePage.load
   expect(@homePage).to have_header
@@ -13,14 +13,10 @@ Dado("que estou na home") do
   expect(@homePage).to have_site
 end
 
-Quando("eu clicar em contact us") do
-  find(:xpath, '//*[@id="block_various_links_footer"]/ul/li[5]/a').click
+Quando("eu clicar em terms and conditions of use") do
+  @homePage.terms.click
 end
 
-Entao ("será direcionado para outra página com o título CUSTOMER SERVICE - CONTACT US") do
- find(:xpath, '//*[@id="center_column"]/h1')
+Entao("será direcionado para outra página com o título TERMS AND CONDITIONS OF USE") do
+  find(:xpath, '//*[@id="center_column"]/div/h1')
 end
-
-
-
-

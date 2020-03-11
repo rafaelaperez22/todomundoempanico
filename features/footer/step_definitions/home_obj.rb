@@ -9,7 +9,7 @@ class HomePage < SitePrism::Page
   element :contact, :xpath, '//*[@id="block_various_links_footer"]/ul/li[5]/a' 
   element :terms, :xpath, '//*[@id="block_various_links_footer"]/ul/li[6]/a'
   element :about, :xpath, '//*[@id="block_various_links_footer"]/ul/li[7]/a'
-  element :site, :xpath, '//*[@id="block_various_links_footer"]/ul/li[8]/a'
+  element :site, :xpath, '//*[@id="block_various_links_footer"]/ul/li[8]/a' 
 end
 
 

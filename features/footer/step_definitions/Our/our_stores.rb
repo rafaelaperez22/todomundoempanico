@@ -14,7 +14,7 @@ Dado("que eu estiver na home") do
 end
 
 Quando("eu clicar em our stores") do
-  find(:xpath, '//*[@id="block_various_links_footer"]/ul/li[4]/a').click
+  @homePage.our.click
 end
 
 Entao("será exibida a área our store\(s)! com o mapa da localização das lojas") do

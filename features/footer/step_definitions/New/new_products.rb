@@ -1,4 +1,4 @@
-Dado("que eu estou na home") do
+Dado("que eu está na home") do
   @homePage = HomePage.new
   @homePage.load
   expect(@homePage).to have_header
@@ -13,10 +13,10 @@ Dado("que eu estou na home") do
   expect(@homePage).to have_site
 end
 
-Quando("eu clicar em about us") do
-  find(:xpath, '//*[@id="block_various_links_footer"]/ul/li[7]/a').click
+Quando("eu clicar em new products") do
+  @homePage.new.click
 end
 
-Entao("será direcionado para outra página com o título ABOUT US") do
-  find(:xpath, '//*[@id="center_column"]/div/h1')
+Entao("será exibida a área de new products") do
+  find(:xpath, '//*[@id="center_column"]/h1')
 end
