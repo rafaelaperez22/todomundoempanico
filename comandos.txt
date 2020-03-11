@@ -1,0 +1,38 @@
+-> Navegação
+visit “link do site”
+
+-> clique links e botões por id-texto-nome
+click_link(‘id-do-link’)
+click_link(‘texto do link’)
+click_link(‘nome_do_link)
+
+click_button(‘id-do-botao’)
+click_ button (‘texto do botao’)
+click_ button (‘nome_do_ botao)
+
+-> interagindo com formulário
+fill_in(‘nome_do_elemento’, :with => ‘valor’)
+choose(‘nome_do_radio_button’)
+check(‘nome_do_checkbox’)
+uncheck(‘nome_do_checkbox’)
+select(‘opcao’, from: ‘nome_do_combobox’)
+
+-> buscar elemento na pagina
+find(‘#id’)
+find(‘nome_do_elemento’)
+find(‘.class’)
+find(:id, ‘id_do_elemento’)
+find(:xpath, ‘xpath_do_elemento’)
+find(:css, ‘css_do_elemento’)
+
+-> validações
+assert_text(‘texto_que_deve_existir’)
+assert_no_text(‘texto_que_nao_deve_existir’)
+has_xpath?(‘existe_xpath_do_elemento?’)
+has_css?(‘existe_css?’)
+has_content?(‘existe_conteudo?’)
+has_link?(‘existe_link?’)
+should have_xpath('deve_existir_xpath_no_elemento')
+should have_css
+should have_content
+should have_no_content
