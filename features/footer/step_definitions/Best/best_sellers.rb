@@ -23,10 +23,12 @@ Entao("será direcionado para outra página com o título BEST SELLERS") do
 end
 
 Quando("escolher a opcao Price: Highest first") do
-  @bestPage.Phighest.click
+  @homePage.best.click
+  select('Price: Highest first', from: @idselectProductSort)
 end
 
 Entao("os produtos ficarao ordenados do maior para o menor preco") do
   find(:xpath, '//*[@id="center_column"]/ul/li[1]')
   find(:xpath, '//*[@id="center_column"]/ul/li[2]')
 end
+
